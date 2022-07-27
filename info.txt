@@ -21,3 +21,6 @@ To confirm
 6 \dt
 
 if there's an issue with the app, do a hard restart (ctrl shit r) and if that doesn't work, in the terminal do (crtl+c) to quit and restart the app.
+
+if in doubt - pip3 install postgres
+then run.py
