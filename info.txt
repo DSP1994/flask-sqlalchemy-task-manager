@@ -1,0 +1,23 @@
+when starting up github make sure to install the Flask-SQLAlchemy and psycopg2
+- pip3 install Flask-SQLAlchemy psycopg2 
+DO THIS BEFORE ANYTHING ELSE!!!!
+
+python3 run.py - to launch
+
+if you can't get into the psql - remember to use set_pg and try again
+
+then to create a database use 'CREATE DATABASE taskmanager;'
+then use - '\c taskmanager;' to access it
+use \q to quit
+
+Need to use Python to geneerate and migrate the models to the new database.
+to do this type;
+1 'python3'
+2 'from taskmanager import db
+3 'db.create_all()'
+4 'exit()'
+To confirm
+5 psql -d taskmanager
+6 \dt
+
+if there's an issue with the app, do a hard restart (ctrl shit r) and if that doesn't work, in the terminal do (crtl+c) to quit and restart the app.
