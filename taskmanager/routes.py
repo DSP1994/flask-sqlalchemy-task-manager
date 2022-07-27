@@ -4,7 +4,6 @@ from taskmanager.models import Category, Task
 # line 3 is importing from taskmanager folder, models.py,
 # and is finding the 'Category and Task classes made in there
 
-
 @app.route("/")
 def home():
     return render_template("tasks.html")
@@ -16,7 +15,7 @@ def categories():
     return render_template("categories.html", categories=categories)
 
 
-@app.route("/add_category", methods=["GET", "POST"])
+@app.route("/add_category", methods=["GET", "POST"]) 
 # get and post , needed because it's submitting a form
 def add_category():
     if request.method == "POST":
@@ -35,3 +34,5 @@ def edit_category(category_id):
         db.session.commit()
         return redirect(url_for("categories"))
     return render_template("edit_category.html", category=category)
+
+
