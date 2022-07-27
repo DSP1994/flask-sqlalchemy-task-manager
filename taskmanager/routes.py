@@ -13,3 +13,8 @@ def home():
 @app.route("/categories")
 def categories():
     return render_template("categories.html")
+
+@app.route("/add_category", methods=["GET", "POST"])
+# get and post , needed because it's submitting a form
+def add_category():
+    return render_template("add_category.html")
