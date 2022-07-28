@@ -43,6 +43,29 @@
                 </div>    
             </div>
         </div>
+        <!-- category id-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <select name="category_id" id="category_id" class="validate" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in catergories %}
+                        <option value="{{ category.id }}">{{ category.category_name }}</option>
+                    {% end for %}
+                </select>
+                <label for="category_id">Task Name</label>
+            </div>
+        </div>
+
+        <div class="input-field col s12">
+            <select>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Materialize Select</label>
+          </div>
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
