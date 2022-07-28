@@ -74,5 +74,4 @@ def edit_task(task_id):
         task.due_date = request.form.get("due_date")
         task.category_id = request.form.get("category_id")
         db.session.commit()
-
     return render_template("edit_task.html", task=task, categories=categories)
